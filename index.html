@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Dashboard - Juventude Digital</title>
+</head>
+
+<body>
+    <nav class="navbar container">
+        <div class="navbar-imgs">
+            <img src="/assets/imgs/logo jd rosa.png" alt="" />
+            <img src="/assets/imgs/Prefeitura.png" alt="" />
+        </div>
+        <div class="navbar-links" id="navbarLinks">
+            <a href="#">Home</a>
+            <a href="#">Juventude Digital</a>
+            <a href="#">Fortaleza Bilíngue</a>
+        </div>
+        <div class="navbar-links-hamburguer" id="navbarHamburger">
+            <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M0 3C0 2.44687 0.446875 2 1 2H13C13.5531 2 14 2.44687 14 3C14 3.55313 13.5531 4 13 4H1C0.446875 4 0 3.55313 0 3ZM0 8C0 7.44687 0.446875 7 1 7H13C13.5531 7 14 7.44687 14 8C14 8.55313 13.5531 9 13 9H1C0.446875 9 0 8.55313 0 8ZM14 13C14 13.5531 13.5531 14 13 14H1C0.446875 14 0 13.5531 0 13C0 12.4469 0.446875 12 1 12H13C13.5531 12 14 12.4469 14 13Z"
+                    fill="black" />
+            </svg>
+        </div>
+    </nav>
+
+    <section class="global-info ">
+        <h1 class="header-text">Informações Globais:</h1>
+
+        <div class="container">
+            <div class="row-top">
+                <div class="card">
+                    <div class="card-header">
+                        <h1>Total de alunos capacitados:</h1>
+                    </div>
+                    <div class="card-body">
+                        <p>26.433</p>
+                        <!-- <a href="#" class="btn">Mais informações</a> -->
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h1>Total de alunos capacitados do Ensino Fundamental:</h1>
+                    </div>
+                    <div class="card-body">
+                        <p>16.976</p>
+                        <!-- <a href="#" class="btn">Mais informações</a> -->
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h1>Total de alunos capacitados de Mercado:</h1>
+                    </div>
+                    <div class="card-body">
+                        <p>8.101</p>
+                        <!-- <a href="#" class="btn">Mais informações</a> -->
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h1>Total de alunos capacitados de Games:</h1>
+                    </div>
+                    <div class="card-body">
+                        <p>1.356</p>
+                        <!-- <a href="#" class="btn">Mais informações</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="header-text">Gráficos por filtros:</h1>
+        <div class="row-mid">
+            <div class="card-mid">
+                <div>
+                    <select id="eixoSelect" class="select-option" onchange="exibirMes()">
+                        <option disabled selected>Selecione o Eixo</option>
+                        <option value="Mercado">Mercado</option>
+                        <option value="Jogos">Jogos</option>
+                    </select>
+
+                    <select id="mesSelect" class="select-option" style="display: none" onchange="exibirAno()">
+                        <option disabled selected>Selecione o Mês</option>
+                        <option value="Janeiro">Janeiro</option>
+                        <option value="Fevereiro">Fevereiro</option>
+                        <option value="Março">Março</option>
+                        <option value="Abril">Abril</option>
+                        <option value="Maio">Maio</option>
+                        <option value="Junho">Junho</option>
+                        <option value="Julho">Julho</option>
+                        <option value="Agosto">Agosto</option>
+                        <option value="Setembro">Setembro</option>
+                        <option value="Outubro">Outubro</option>
+                        <option value="Novembro">Novembro</option>
+                        <option value="Dezembro">Dezembro</option>
+                    </select>
+
+                    <select id="anoSelect" class="select-option" style="display: none" onchange="armazenarEscolhas()">
+                        <option disabled selected>Selecione o Ano</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                    </select>
+                </div>
+
+                <div id="chart"></div>
+            </div>
+
+            <div class="card-mid">
+                <div id="chart2"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <img src="/assets/imgs/logo jd completa.png" alt="Logo JD" />
+                <div class="footer-left-links">
+                    <a href="#" class="footer-left-links-fb"><img src="/assets/imgs/facebook-icon.svg"
+                            alt="Facebook" /></a>
+                    <a href="#" class="footer-left-links-li"><img src="/assets/imgs/linkedin-icon.svg"
+                            alt="Linkedin" /></a>
+                    <a href="#" class="footer-left-links-in"><img src="/assets/imgs/instagram-icon.svg"
+                            alt="Instagram" /></a>
+                </div>
+            </div>
+            <div class="footer-middle">
+                <img src="/assets/imgs/Citinova.png" alt="Logo Citinova" />
+                <p>
+                    <strong>Fundação de Ciência, Tecnologia e Inovação de Fortaleza –
+                        Citinova</strong>
+                </p>
+                <p>
+                    Av. Padre Antônio Tomás, 610 - Aldeota, Fortaleza - CE | CEP:
+                    60140-160
+                </p>
+            </div>
+            <div class="footer-right">
+                <img src="/assets/imgs/Prefeitura.png" alt="Logo Prefeitura de Fortaleza" />
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</body>
+
+</html>

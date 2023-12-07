@@ -78,43 +78,46 @@
 
         <h1 class="header-text">Gráficos por filtros:</h1>
         <div class="row-mid">
-            <div class="card-mid">
-                <div>
-                    <select id="eixoSelect" class="select-option" onchange="exibirMes()">
-                        <option disabled selected>Selecione o Eixo</option>
-                        <option value="Mercado">Mercado</option>
-                        <option value="Jogos">Jogos</option>
-                    </select>
-
-                    <select id="mesSelect" class="select-option" style="display: none" onchange="exibirAno()">
-                        <option disabled selected>Selecione o Mês</option>
-                        <option value="Janeiro">Janeiro</option>
-                        <option value="Fevereiro">Fevereiro</option>
-                        <option value="Março">Março</option>
-                        <option value="Abril">Abril</option>
-                        <option value="Maio">Maio</option>
-                        <option value="Junho">Junho</option>
-                        <option value="Julho">Julho</option>
-                        <option value="Agosto">Agosto</option>
-                        <option value="Setembro">Setembro</option>
-                        <option value="Outubro">Outubro</option>
-                        <option value="Novembro">Novembro</option>
-                        <option value="Dezembro">Dezembro</option>
-                    </select>
-
-                    <select id="anoSelect" class="select-option" style="display: none" onchange="armazenarEscolhas()">
-                        <option disabled selected>Selecione o Ano</option>
-                        <option value="2021">2021</option>
-                        <option value="2022">2022</option>
-                        <option value="2023">2023</option>
-                    </select>
-                </div>
-
-                <div id="chart"></div>
+            <div class="card-mid" id="grafico1">
+                <div class="card-mid-chart" id="chart1"></div>
             </div>
 
-            <div class="card-mid">
-                <div id="chart2"></div>
+            <div class="card-mid" id="grafico2">
+                <div class="card-mid-chart" id="chart2"></div>
+            </div>
+        </div>
+
+        <div class="row-bottom">
+            <h2>Eixo Mercado: 2021 ~ 2023</h2>
+            <div class="row-bottom-content-top">
+                <div class="card-row">
+                    <div class="card-header-row"><h2>Cursos:</h2></div>
+                    <div class="card-body-row"><p>152</p></div>
+                </div>
+                <div class="card-row">
+                    <div class="card-header-row"><h2>Oficinas:</h2></div>
+                    <div class="card-body-row"><p>39</p></div>
+                </div>
+                <div class="card-row">
+                    <div class="card-header-row"><h2>Parcerias:</h2></div>
+                    <div class="card-body-row"><p>7</p></div>
+                </div>
+            </div>
+
+            <h2>Cursos: 2021 ~ 2023</h2>
+            <div class="row-bottom-content-bottom">
+                <div class="card-row">
+                    <div class="card-header-row"><h2>Participantes:</h2></div>
+                    <div class="card-body-row"><p>3.668</p></div>
+                </div>
+                <div class="card-row">
+                    <div class="card-header-row"><h2>Certificados:</h2></div>
+                    <div class="card-body-row"><p>2.119</p></div>
+                </div>
+                <div class="card-row">
+                    <div class="card-header-row"><h2>Porcentagem:</h2></div>
+                    <div class="card-body-row"><p>57,8%</p></div>
+                </div>
             </div>
         </div>
     </section>
